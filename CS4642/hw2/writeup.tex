@@ -1,0 +1,210 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{graphicx}
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title {	
+\normalfont \normalsize 
+\textsc{Georgia Institute of Technology, College of Computing} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge CX4640: Homework 2 \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Nathan Korzekwa} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 2.7}
+``I don't wanna work, I don't wanna work; I just want to bang on this mug all day!'' -- Michael Scott \\
+
+
+\subsection*{Part A}
+\begin{align}
+det(A) &= 1 - (1 + \epsilon)(1 - \epsilon) \\
+	   &= \epsilon^2	
+\end{align}
+
+\subsection*{Part B}
+So for the determinant to be greater than 0, 
+\begin{align}
+	0 \leq \epsilon < \epsilon_{mach}
+\end{align}
+
+\subsection*{Part C}
+$$A =
+\left[\begin{array}{cc}
+1 & 1 + \epsilon\\
+1 - \epsilon & 1\\
+\end{array}\right]$$ \\*
+
+$$M_1A =
+\left[\begin{array}{cc}
+1 & 1 + \epsilon\\
+0 & \epsilon^2\\
+\end{array}\right] = U$$ \\*
+
+$$M_1 =
+\left[\begin{array}{cc}
+1 & 0\\
+-1 + \epsilon & 1\\
+\end{array}\right]$$ \\*
+
+$$M_1^{-1} =
+\left[\begin{array}{cc}
+1 & 0\\
+1 - \epsilon & 1\\
+\end{array}\right] = L$$ \\*
+
+\subsection{Part D}
+\begin{align*}
+	det(U) &= \epsilon^2 - 0 \\
+		   &= \epsilon^2 \\
+\end{align*}
+\begin{align*}
+	0 \leq \epsilon < \sqrt{\epsilon_{mach}}
+\end{align*}
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 2.21}
+\begin{align*}
+	\vec{x} = B^{-1}(2A + I)(C^{-1} + A)\vec{b} \\
+	B\vec{x} = 2AC^{-1}\vec{b} + 2A^2\vec{b} + C^{-1}\vec{b} + A\vec{b}
+\end{align*}
+
+From this conclusion, we can solve two linear systems since $x^\prime = C^{-1}\vec{b}$ can be solved for with $Cx^\prime = \vec{b}$, without computing any inverses. The implementation for this question can be found in the included file ``q2.m''.
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 3
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 2.26}
+\subsection*{Part A}
+Because the columns of $uv^T$ are multiples of each other, the only thing we need to worry about is annihilating one of the diagonals, and therefore degrees of freedom of the matrix.
+
+Ergo, for an $n \times n$ matrix
+$$
+	u_iv_i \neq 1; 0 \leq i < n - 1
+$$
+
+\subsection*{Part B}
+By the Sherman-Morrison formula, 
+$$(A - \vec{u}\vec{v}^T)^{-1} = A^{-1} + A^{-1}\vec{u}(1  - v^TA^{-1}u)^{-1}v^TA^{-1}$$
+$$(I - \vec{u}\vec{v}^T)^{-1} = I^{-1} + I^{-1}\vec{u}(1  - v^TI^{-1}u)^{-1}v^TI^{-1}$$
+$$(I - \vec{u}\vec{v}^T)^{-1} = I + \vec{u}(1  - v^Tu)^{-1}v^T$$
+And since $1 - v^Tu$ is a scalar,
+$$(I - \vec{u}\vec{v}^T)^{-1} = I + \sigma\vec{u}v^T$$
+where $\sigma = (1  - v^Tu)^{-1}$.
+
+So if we want to write $(I - \vec{u}\vec{v}^T)^{-1} = I - \sigma\vec{u}v^T$, we factor the negative into $\sigma$:
+
+$$
+\sigma = (v^Tu - 1)^{-1}
+$$.
+
+\subsection*{Part C}
+Yes, an elementary elimination matrix is, in fact, elementary because it differs from the identity matrix by only one column. Because of this, the ``perturbation matrix'' (the difference between the identity and the elimination matrix) is rank one since all of its columns are multiples of each other (linearly dependent).
+
+Because of this, the elementary elimination matrix can be represented as:
+$$
+	M_k = I - \vec{m}\vec{e}_k^T 
+$$
+where 
+$$
+m = (0, ..., m_{k+1}, ..., m_n)^T
+$$
+
+$M_k$ eliminates all numbers below the $k$th row in a vector.
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 4
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 4}
+Using the 1-norm, both results produced low relative errors on estimating the condition number -- with the random method working better on the first matrix $A_1$ and the iterative, deterministic method from part B working better on the second test matrix, $A_2$.
+
+This is evidenced in the program output:
+
+>> q4 \\
+A1 rel error method 1: 0.486764 \\
+A1 rel error method 2: 0.644651 \\
+A2 rel error method 1: 0.201978 \\
+A2 rel error method 2: 0.482083 \\
+>> q4 \\
+A1 rel error method 1: 0.486764 \\
+A1 rel error method 2: 0.066616 \\
+A2 rel error method 1: 0.201978 \\
+A2 rel error method 2: 0.451165 \\ 
+>> q4
+A1 rel error method 1: 0.486764 \\
+A1 rel error method 2: 0.410768 \\ 
+A2 rel error method 1: 0.201978 \\
+A2 rel error method 2: 0.296503 \\
+
+The code that runs these tests can be found in ``q4.m''.
+
+%------------------------------------------------
+
+\end{document}

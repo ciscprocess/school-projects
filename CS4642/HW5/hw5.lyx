@@ -1,0 +1,2218 @@
+#LyX file created by tex2lyx 2.0.6
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Structured General Purpose Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+
+\usepackage{fancyhdr}% Required for custom headers
+\usepackage{lastpage}% Required to determine the last page for the footer
+\usepackage{extramarks}% Required for headers and footers
+% Required to insert images
+\usepackage{lipsum}% Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsfonts}\usepackage{amsthm}% Math packages
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in 
+
+\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+
+\lhead{\hmwkAuthorName} % Top left header
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle} % Top center header
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand{\headrulewidth}{0.4pt} % Size of the header rule
+\renewcommand{\footrulewidth}{0.4pt} % Size of the footer rule
+
+ % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT STRUCTURE COMMANDS
+%	Skip this unless you know what you're doing
+%----------------------------------------------------------------------------------------
+
+% Header and footer for when a page split occurs within a problem environment
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+}
+
+% Header and footer for when a page split occurs between problem environments
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1}{}\nobreak
+}
+
+ % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+\newcommand{\homeworkProblemName}{}
+\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
+\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
+\section{\homeworkProblemName} % Make a section in the document with the custom problem count
+\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+}{
+\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
+\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+}
+
+\newcommand{\homeworkSectionName}{}
+\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
+\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+}{
+\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+   
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{Homework\ \#5} % Assignment title
+\newcommand{\hmwkDueDate}{Monday,\ November\ 11,\ 2013} % Due date
+\newcommand{\hmwkClass}{CS4642} % Course/class
+\newcommand{\hmwkClassTime}{3:00pm} % Class/lecture time
+\newcommand{\hmwkClassInstructor}{Hongyuan Zha} % Teacher/lecturer
+\newcommand{\hmwkAuthorName}{Nathan Korzekwa} % Your name
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+\vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName}}
+ % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+
+
+\end_preamble
+\use_default_options false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\paperfontsize default
+\spacing single
+\use_hyperref 0
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 0
+\secnumdepth 0
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+maketitle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%----------------------------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%	TABLE OF CONTENTS
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%----------------------------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%----------------------------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%	PROBLEM 1
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%----------------------------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% To have just one problem per page, simply put a 
+\backslash
+clearpage after each problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+Your trivial words of sorrow, of love and guilt mean nothing to me, young lady. My wife understands. She is the one that I chose to live by my side. There are no more words that need to pass between us now. That's what it means to be the wife of the Fuhrer." -- Fuhrer-President King Bradley 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkProblem}
+\end_layout
+
+\end_inset
+
+[Problem 1]
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+(a)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Section within problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \[g_1^\prime(x) = 1 - 2x\]
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula \[x^\star = \sqrt{3}\]
+\end_inset
+
+A fixed-point function is locally convergent if and only if its magnitude of derivative at 
+\begin_inset Formula $x^\star$
+\end_inset
+
+ is less than one.
+\begin_inset Newline newline
+\end_inset
+
+ So, 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula \[g_1^\prime(x^\star) = 1 - 2\sqrt{3}\]
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ and since we know 
+\begin_inset Formula $2 > \sqrt{3} > 1$
+\end_inset
+
+, 
+\begin_inset Formula \[|g_1^\prime(x^\star)| > 1\]
+\end_inset
+
+Therefore, this function is NOT locally convergent for 
+\begin_inset Formula $y = 3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+(b)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Section within problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+		g_2^\prime(x) &= 1 - \frac{2x}{y} \\
+					  &= 1 - \frac{2x}{3} \\
+	\end{align*}
+\end_inset
+
+
+\begin_inset Formula \begin{align*}
+		x^\star &= \sqrt{3} \\
+		x^\star &\ \epsilon \ (1, 2) \\
+	\end{align*}
+\end_inset
+
+therefore, because 
+\begin_inset Formula $g_2^\prime$
+\end_inset
+
+ is a linear function of 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula \begin{align*}
+		g_2^\prime(x^\star) &\ \epsilon \ (\frac{1}{3}, -\frac{1}{3}) \\
+	\end{align*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+From this, we must conclude that 
+\begin_inset Formula $|g_2^\prime(x^\star)| < 1$
+\end_inset
+
+, meaning that this function has an interval of local convergence for 
+\begin_inset Formula $y = 3$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+(c)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Section within problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ Since the function we are trying to find the root of is 
+\begin_inset Formula $f(x) = x^2 - 3 = 0$
+\end_inset
+
+, and since Newton's method defines a fixed-point function as 
+\begin_inset Formula $g(x) = x - \frac{f(x)}{f^\prime(x)}$
+\end_inset
+
+, the function for this problem is: 
+\begin_inset Formula \[
+		g_n(x) = x - \frac{x^2 - y}{2x}
+	\]
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkProblem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkProblem}
+\end_layout
+
+\end_inset
+
+[Problem 2] 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Custom section title
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%--------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+(a)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Section within problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ To determine what 
+\begin_inset Formula $d$
+\end_inset
+
+ needs to be for this function to be locally convergent in terms of fixed-point iteration, we can apply the same logic as used in the previous section. Since we're assuming a global 
+\begin_inset Formula $d$
+\end_inset
+
+, here, the following property must hold: 
+\begin_inset Formula \begin{align*}
+		g^\prime(x^\star)= 1 - \frac{f^\prime(x^\star)}{d}\\
+		|g^\prime(x^\star)| < 1
+	\end{align*}
+\end_inset
+
+From this, we can do some manipulation to get a range of valid values for 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{align*}
+		|1 - \frac{f^\prime(x^\star)}{d}| < 1 \\
+		0 < \frac{f^\prime(x^\star)}{d} < 2 \\
+		0 < \frac{1}{d} < \frac{2}{f^\prime(x^\star)} \\
+		\infty > d > \frac{f^\prime(x^\star)}{2} \\
+	\end{align*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+So, this scheme will be locally convergent when 
+\begin_inset Formula $d > \frac{f^\prime(x^\star)}{2}$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+(b)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Section within problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ Generally, the convergence rate is linear, although there is one special case where it is quadratic, as shown in the next section. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+(c)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Section within problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ For a function 
+\begin_inset Formula $g$
+\end_inset
+
+ to exhibit quadratic convergence under the fixed-point scheme, it must be the case that 
+\begin_inset Formula $g(x^\star) = 0$
+\end_inset
+
+ (This can be seen as an extension of the proof that begins on page 227 of the textbook, and details on this will be provided in the next problem). In this case, to satisfy 
+\begin_inset Formula $g(x^\star) = 0$
+\end_inset
+
+, 
+\begin_inset Formula $d$
+\end_inset
+
+ must be equal to 
+\begin_inset Formula $f^\prime(x^\star)$
+\end_inset
+
+. That is, whenever 
+\begin_inset Formula $d = f^\prime(x^\star)$
+\end_inset
+
+, the convergence is quadratic. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkSection}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%--------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkProblem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%----------------------------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%	PROBLEM 3
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%----------------------------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkProblem}
+\end_layout
+
+\end_inset
+
+[Problem 3] 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Roman numerals
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Remember that 
+\begin_inset Formula $e_k = x_k - x^\star$
+\end_inset
+
+, and 
+\begin_inset Formula $e_{k + 1} = g(x_k) - x^\star = g(x_k) - g(x^\star)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+For all 
+\begin_inset Formula $x_k$
+\end_inset
+
+, by the mean value theorem, there is a value 
+\begin_inset Formula $\theta_k$
+\end_inset
+
+ that satisfies the following: 
+\begin_inset Formula \begin{align}
+	g^\prime(\theta_k) = \frac{g(x_k) - g(x^\star)}{x_k - x^\star}
+\end{align}
+\end_inset
+
+and, as the book elaborates, this is equivalent to: 
+\begin_inset Formula \begin{align}
+	(x_k - x^\star)g^\prime(\theta_k) &= g(x_k) - g(x^\star) \\
+	e_{k+1} &= g^\prime(\theta_k)e_k
+\end{align}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+By examining equation (1), it becomes obvious that, 
+\begin_inset Formula \begin{align}
+	\lim\limits_{k \rightarrow \infty} \frac{g(x_k) - g(x^\star)}{x_k - x^\star} = g^\prime(x^\star)
+\end{align}
+\end_inset
+
+due to the definition of the derivative, and since 
+\begin_inset Formula $g(x_k)$
+\end_inset
+
+ converges to 
+\begin_inset Formula $x^\star$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+From this, we can see:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{align}
+	\lim\limits_{k \rightarrow \infty} \frac{|e_{k+1}|}{|e_k|} &= \lim\limits_{k \rightarrow \infty} \frac{|g(\theta_k)||e_k|}{|e_k|} \\
+															   &= \lim\limits_{k \rightarrow \infty} |g(\theta_k)|		
+\end{align}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Therefore, by combining the results of equations (1) and (4), it follows that: 
+\begin_inset Formula \begin{align}
+	\lim\limits_{k \rightarrow \infty} \frac{|e_{k+1}|}{|e_k|} = g^\prime(x^\star)
+\end{align}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Now, for this question, we are considering the case of when 
+\begin_inset Formula $g^\prime(x^\star)$
+\end_inset
+
+ happens to be zero. So, to start with this, let's express the equation 
+\begin_inset Formula $g(x_k)$
+\end_inset
+
+ as a Taylor series (this part was omitted in the book, much to my ire): 
+\begin_inset Formula \begin{align}
+	g(x_k) = g(x^\star) + g^\prime(x^\star)(x_k - x^\star) + \frac{g^{\prime\prime}(\xi_k)}{2}(x_k - x^\star)^2
+\end{align}
+\end_inset
+
+By Taylor's theorem, using the explicit formula for the remainder, this result is exact for some 
+\begin_inset Formula $\xi_k$
+\end_inset
+
+. Since we are interested only when 
+\begin_inset Formula $g(x^\star) = 0$
+\end_inset
+
+, we can simplify the previous equation: 
+\begin_inset Formula \begin{align}
+	g(x_k) = g(x^\star) + \frac{g^{\prime\prime}(\xi_k)}{2}(x_k - x^\star)^2
+\end{align}
+\end_inset
+
+From this, remembering that 
+\begin_inset Formula $e_{k + 1} = g(x_k) - x^\star = g(x_k) - g(x^\star)$
+\end_inset
+
+, we can conclude: 
+\begin_inset Formula \begin{align}
+	e_{k + 1} &= \frac{g^{\prime\prime}(\xi_k)}{2}(x_k - x^\star)^2 \\
+			  &= \frac{g^{\prime\prime}(\xi_k)}{2}(e_k)^2
+\end{align}
+\end_inset
+
+Also, using the same logic as in equation (4): 
+\begin_inset Formula \begin{align}
+		\lim\limits_{k \rightarrow \infty} \frac{g(x_k) - g(x^\star)}{(x_k - x^\star)^2} = \frac{g^{\prime\prime}(x^\star)}{2}
+\end{align}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+So now let's put all this together: 
+\begin_inset Formula \begin{align}
+	\lim\limits_{k \rightarrow \infty} \frac{|e_{k+1}|}{|e_k|^2} &=\lim\limits_{k \rightarrow \infty} \frac{|\frac{g^{\prime\prime}(\xi_k)}{2}e_k^2|}{|e_k^2|} \\
+																 &= \lim\limits_{k \rightarrow \infty}|\frac{g^{\prime\prime}(\xi_k)}{2}| \\
+																 &= |\frac{g^{\prime\prime}(x^\star)}{2}|
+\end{align}
+\end_inset
+
+This shows that for 
+\begin_inset Formula $|\frac{g^{\prime\prime}(x^\star)}{2}| < 1$
+\end_inset
+
+, that the convergence of a fixed-point equation is at least quadratic if 
+\begin_inset Formula $g^\prime(x^\star) = 0$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkProblem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkProblem}
+\end_layout
+
+\end_inset
+
+[Problem 4] 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Roman numerals
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+(a)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Section within problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ The code for this section can be found in 
+\begin_inset Quotes eld
+\end_inset
+
+q4a.m
+\begin_inset Quotes erd
+\end_inset
+
+ in the included zip file.
+\begin_inset Newline newline
+\end_inset
+
+ Use Newton's method to solve 
+\begin_inset Formula \begin{align*}
+		f(n) = \frac{p}{r}[(1 + r)^n - 1] - a(1 + r)^n = 0\\
+	\end{align*}
+\end_inset
+
+
+\begin_inset Formula \[
+		f'(n) = \frac{p}{r}[(1 + r)^nln(1 + r) - 1] - a(1 + r)^nln(1 + r)
+	\]
+\end_inset
+
+and 
+\begin_inset Formula \begin{align*}
+		g(n) &= n - \frac{f(n)}{f'(n)}
+	\end{align*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+so we use these to garner convergence. This problem converges quickly to 
+\begin_inset Formula $n = 15.7252$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+(b)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Section within problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ The code for this section can be found in 
+\begin_inset Quotes eld
+\end_inset
+
+q4b.m
+\begin_inset Quotes erd
+\end_inset
+
+ in the included zip file.
+\begin_inset Newline newline
+\end_inset
+
+ I probably should have used the secant method for this particular problem seeing how nasty the derivative is to compute, but, painful as it was, it is still closed-form and manageable enough, and the Quadratic Convergence of Newton's method is attractive. In this problem, the function is: 
+\begin_inset Formula \begin{align*}
+		f(r) = \frac{p}{r}[(1 + r)^n - 1] - a(1 + r)^n = 0\\
+	\end{align*}
+\end_inset
+
+and, this time, the derivative is: 
+\begin_inset Formula \[
+		f'(r) = -an(1+r)^{(-1+n)}+(p(1+nr(1+r)^{(n-1)}-(1+r)^n))/r^2
+	\]
+\end_inset
+
+This problem converges rather quickly to 
+\begin_inset Formula $r = 0.0775$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+(c)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Section within problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ The code for this section can be found in 
+\begin_inset Quotes eld
+\end_inset
+
+q4c.m
+\begin_inset Quotes erd
+\end_inset
+
+ in the included zip file.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula \begin{align*}
+			f(p) = \frac{p}{r}[(1 + r)^n - 1] - a(1 + r)^n = 0\\
+		\end{align*}
+\end_inset
+
+Derivative, 
+\begin_inset Formula \[
+			f'(p) = (-1+(1+r)^n)/r
+		\]
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+The problem converges to 
+\begin_inset Formula $p = 8718.5$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkProblem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkProblem}
+\end_layout
+
+\end_inset
+
+[Problem 5] 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Roman numerals
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+(a)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Section within problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ This is all simple matrix algebra. First, observe: 
+\begin_inset Formula \begin{align*}
+		R_k &= I - AX_k \\
+		R_k^2 &= (I - AX_k)(I - AX_k)\\
+		      &= II - IAX_k - AX_kI - AX_kAX_k\\
+		      &= I - 2AX_k + (AX_k)^2
+	\end{align*}
+\end_inset
+
+We also know that: 
+\begin_inset Formula \begin{align*}
+		X_{k+1} = X_k+ X_k(I - AX_k)
+	\end{align*}
+\end_inset
+
+So we substitute: 
+\begin_inset Formula \begin{align*}
+		R_{k+1} &= I - AX_{k+1} \\
+				&= I - A(X_k+ X_k(I - AX_k))\\
+				&= I - AX_k -AX_k(I - AX_k)\\
+				&= I - 2AX_k + (AX_k)^2
+	\end{align*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Now show the other one: 
+\begin_inset Formula $E_{k+1} = E_kAE_k$
+\end_inset
+
+. 
+\begin_inset Formula \begin{align*}
+		 E_kAE_k &= (A^{-1}-X_k)A(A^{-1}- X_k)\\
+		 		 &= (I - X_kA)(A^{-1} - X_k)\\
+		 		 &= A^{-1} - X_k - X_k(I + AX_k)\\
+		 E_{k+1} &= A^{-1} - X_{k+1} \\
+				 &= A^{-1} - X_k - X_k(I - AX_k) 
+	\end{align*}
+\end_inset
+
+Now that we've got that useless tedium out of the way, we can move on to the actual problem. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkSection}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+(b)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Section within problem
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ The code for this problem is included in the attached zip file as 
+\begin_inset Quotes eld
+\end_inset
+
+q5b.m
+\begin_inset Quotes erd
+\end_inset
+
+. 
+\begin_inset Newline newline
+\end_inset
+
+ This method of calculating a matrix inverse is quite good, in some cases converging to reasonably small error (
+\begin_inset Formula $< 10^{-8}$
+\end_inset
+
+) in as little as 10 iterations. However, some took significantly more. With 40 iterations, it regularly had error of 
+\begin_inset Formula $< 10^{-14}$
+\end_inset
+
+ as measured by 
+\begin_inset Formula $\|A^{-1}_{newton} - A{-1}_{matlab}\|_2$
+\end_inset
+
+. I also ran a test in which I solved a linear system by right-multiplying the vector with 
+\begin_inset Formula $A^{-1}_{newton}$
+\end_inset
+
+, and contrasted the resulting vector with what using LU decomposition produced. Error remained low. Run the included script for more details. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkSection}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkProblem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%----------------------------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%	PROBLEM 6
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%----------------------------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkProblem}
+\end_layout
+
+\end_inset
+
+[Problem 6] 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Roman numerals
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+Examine the graphs for the convergence of the equation 
+\begin_inset Formula $f(x) = x^{2n} - a^n$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename n1.png
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename n5.png
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename n10.png
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+You'll instantly notice that as 
+\begin_inset Formula $n$
+\end_inset
+
+ grows, the convergence of the equation seems to slow. Since the convergence of this function is realized by Newton's Method, it has Quadratic Convergence. However, quadratically convergent equations have this truth: 
+\begin_inset Formula \[
+\lim\limits_{k \rightarrow \infty} \frac{|e_{k+1}|}{|e_k|^2} = C
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Even though all Quadratically convergent equations have an increasing number correct digits per iteration, the constant 
+\begin_inset Formula $C$
+\end_inset
+
+ determines how quickly the overall system converges (it modifies it by a constant factor, thereby 
+\begin_inset Quotes eld
+\end_inset
+
+stretching
+\begin_inset Quotes erd
+\end_inset
+
+ the error graph horizontally). And, if you'll recall from equation (15), this constant is given by 
+\begin_inset Formula $|\frac{g^{\prime\prime}(x^\star)}{2}|$
+\end_inset
+
+. Therefore, it makes sense, since as 
+\begin_inset Formula $n$
+\end_inset
+
+ grows, 
+\begin_inset Formula $|\frac{g^{\prime\prime}(x^\star)}{2}|$
+\end_inset
+
+ grows.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkProblem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{homeworkProblem}
+\end_layout
+
+\end_inset
+
+[Problem 7] 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Roman numerals
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+ The code for this problem is included in the attached zip file as 
+\begin_inset Quotes eld
+\end_inset
+
+q7.m
+\begin_inset Quotes erd
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ This instance of eigenvalue computation seems to work pretty well. I didn't find any instances where the algorithm diverged, even with a nearly-singular matrix. It often seemed to give the calculated eigenvectors in an opposite sign than did the QR method, at least for the matching eigenvector.
+\end_layout
+
+\begin_layout Standard
+
+An example, 
+\begin_inset Formula \[
+	A = \left[\begin{array}{cc}
+	1 & 3 \\
+	1 & 7\\
+	\end{array}\right]\\
+	\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+The algorithm returned 
+\begin_inset Formula $\lambda = 0.5359$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{v} = (0.9882, -0.1529)^T$
+\end_inset
+
+ in one instance. However, since I initialized the starting vector randomly, sometimes it converged to the dominant eigenvalue/eigenvector pair. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{homeworkProblem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

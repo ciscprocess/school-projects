@@ -1,0 +1,421 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Structured General Purpose Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert images
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in 
+
+\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName} % Top left header
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle} % Top center header
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT STRUCTURE COMMANDS
+%	Skip this unless you know what you're doing
+%----------------------------------------------------------------------------------------
+
+% Header and footer for when a page split occurs within a problem environment
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+}
+
+% Header and footer for when a page split occurs between problem environments
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1}{}\nobreak
+}
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+\newcommand{\homeworkProblemName}{}
+\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
+\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
+\section{\homeworkProblemName} % Make a section in the document with the custom problem count
+\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+}{
+\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
+\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+}
+
+\newcommand{\homeworkSectionName}{}
+\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
+\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+}{
+\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+   
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{Homework\ \#3} % Assignment title
+\newcommand{\hmwkDueDate}{Friday,\ November\ 11,\ 2013} % Due date
+\newcommand{\hmwkClass}{CS4642} % Course/class
+\newcommand{\hmwkClassTime}{3:00pm} % Class/lecture time
+\newcommand{\hmwkClassInstructor}{Hongyuan Zha} % Teacher/lecturer
+\newcommand{\hmwkAuthorName}{Nathan Korzekwa} % Your name
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+\vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName}}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+
+\newpage
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+% To have just one problem per page, simply put a \clearpage after each problem
+``Yet you did not have the wit to see it. Your love of the Halfling's leaf has clearly slowed your mind." -- Saruman
+\begin{homeworkProblem}[Problem 1]
+
+\begin{homeworkSection}{(a)} % Section within problem
+\end{homeworkSection}
+
+
+\end{homeworkProblem}
+\clearpage
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}[Problem 2] % Custom section title
+%--------------------------------------------
+\begin{homeworkSection}{(a)} % Section within problem
+
+\end{homeworkSection}
+
+\begin{homeworkSection}{(b)} % Section within problem
+
+\end{homeworkSection}
+
+
+%--------------------------------------------
+\end{homeworkProblem}
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 3
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}[Problem 3] % Roman numerals
+$$
+	A =
+	\left[\begin{array}{ccc}
+	0.8 & 0.2 & 0.1\\
+	0.1 & 0.7 & 0.3\\
+	0.1 & 0.1 & 0.6\\
+	\end{array}\right]
+$$
+$$
+\vec{x}^{(0)} = 
+\left[\begin{array}{c}
+			x_1 \\
+			x_2 \\
+			x_3 \\
+			\end{array}\right]
+$$
+\begin{homeworkSection}{(a)} % Section within problem
+	\begin{align*}
+		\vec{x}^{(3)} &= A^3\vec{x}^{(0)} \\
+		\vec{x}^{(3)} &= \left[\begin{array}{c}
+			0.587x_1 + 0.371x_2 + 0.28x_3 \\
+			0.238x_1 + 0.454x_2 + 0.42x_3  \\
+			0.175x_1 + 0.175x_2 + 0.3x_3 \\
+			\end{array}\right]
+	\end{align*}		
+\end{homeworkSection}
+
+\begin{homeworkSection}{(b)} % Section within problem
+	\begin{align*}
+		\vec{x}^{(\infty)} &= A^\infty\vec{x}^{(0)} \\
+		\vec{x}^{(\infty)} &= \left[\begin{array}{c}
+			0.45(x_1 + x_2 + x_3) \\
+			0.35(x_1 + x_2 + x_3)  \\
+			0.2(x_1 + x_2 + x_3) \\
+			\end{array}\right]\\
+			&= \left[\begin{array}{c}
+			0.45 \\
+			0.35 \\
+			0.2  \\
+			\end{array}\right]
+	\end{align*}	
+	
+\end{homeworkSection}
+
+\begin{homeworkSection}{(c)} % Section within problem
+	No, as can be seen above. Since the columns of the matrix are all identical, the matrix-vector multiplication can be represented by factoring out the unitary number in the row, as seen above. And, because there is a constraint on every probability vector $\vec{v}$, such that $v_i > 0$ for all $i$, and $\|\vec{v}\|_1 = 1$, the vector is independent of its starting state.
+\end{homeworkSection}
+
+\begin{homeworkSection}{(d)} % Section within problem
+	\begin{align*}
+		A^\infty =
+		\left[\begin{array}{ccc}
+		0.45 & 0.45 & 0.45\\
+		0.35 & 0.35 & 0.35\\
+		0.2  & 0.2 & 0.2  \\
+		\end{array}\right]
+	\end{align*}
+	
+	The rank of this matrix is obviously one since all of the columns are identical.
+\end{homeworkSection}
+
+\begin{homeworkSection}{(e)} % Section within problem
+	Matrix $A$ can be diagonalized by computing matrices $P$, and diagonal $D$, such that $A = PDP^{-1}$.
+	According to the Diagonalization Theorem, $P$ and $D$ are as follows:
+	
+	\begin{align*}
+		D &= \left[\begin{array}{ccc}
+				\lambda_1 & 0 & 0\\
+				0 & \lambda_2 & 0\\
+				0 & 0 & \lambda_3  \\
+				\end{array}\right]
+		  = \left[\begin{array}{ccc}
+ 				1 & 0 & 0\\
+ 				0 & 0.6 & 0\\
+ 				0 & 0 & 0.5  \\
+ 				\end{array}\right]\\
+ 		P &= \left[\begin{array}{ccc}
+				\vec{v}_1 & \vec{v}_2 & \vec{v}_3\\
+				\end{array}\right] = \left[\begin{array}{ccc}
+								-0.7448 & -0.7071 & 0.4082\\
+								-0.5793 & 0.7071 & -0.8165\\
+								-0.3310 & 0 & 0.4082  \\
+								\end{array}\right]
+	\end{align*}
+	
+	Another property of the Diagonalization Theorem is this:
+	$$
+		A^k = PD^kP^{-1}	
+	$$
+	This is very easy to compute since $D$ is diagonal. When we examine D, we notice that $D_{11}$ is 1, but the other diagonal entries are all less than 1. As a result, the matrix $D$ diminishes to:
+	$$
+		D^{\infty} = \left[\begin{array}{ccc}
+		 				1 & 0 & 0\\
+		 				0 & 0 & 0\\
+		 				0 & 0 & 0  \\
+		 				\end{array}\right]\\
+	$$
+	so
+	$$
+		A^\infty = PD^\infty P^{-1}
+	$$
+	
+	Immediately, this explains why the matrix is rank one, since there is only one eigenvalue. Then, with further analysis, we see that $D$ eliminates the all but the first eigenvector in P as well. As a result, the columns of $A^\infty = PD^\infty P^{-1}$ are all a multiple of the first eigenvector of $A$.
+	
+\end{homeworkSection}
+
+\begin{homeworkSection}{(f)} % Section within problem
+	Yes. Because of the constraints on the matrix, that is, because the columns of a Markov transition matrix $A$ must always sum to 1, $det(A - I) = 0$ is true for all Markov transition matrices. While the columns of matrix $A$ all sum to 1, it follows that the columns of the matrix $A - I$ must all sum to 0. Because of this, the space spanned by $A - I$ is bound by the constraint $\|(A - I)x\|_1 = 0$ for all $x$. So for $x \epsilon span(A - I)$, $\sum_{i}x_i = 0$, meaning that one of the components of $x$ is dependent on the others. From this, we lose one degree of freedom, and accordingly $rank(A - I) < n$, where $n$ is the number of columns. Therefore, by the invertible matrix theorem, $det(A - I) = 0$.
+\end{homeworkSection}
+
+\begin{homeworkSection}{(g)} % Section within problem
+	Easy. The set of guaranteed stationary vectors lie in the space spanned by the eigenvector associated with $\lambda = 1$.
+\end{homeworkSection}
+
+\begin{homeworkSection}{(h)} % Section within problem
+	If we know $A^\infty$, then multiplying $A^\infty$ by any vector will result in a stationary vector.
+\end{homeworkSection}
+\end{homeworkProblem}
+\clearpage
+%----------------------------------------------------------------------------------------
+%	PROBLEM 4
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}[Problem 4] % Roman numerals
+
+\begin{homeworkSection}{(a)} % Section within problem
+\problemAnswer{ % Answer
+	The code for this problem can be found in ``q4.m'' in the included zip file.
+	The dominant eigenvector and eigenvalue the method returns is $\lambda_1 = 11.0000, \vec{v}_1 = \left[\begin{array}{c}
+				0.5000 \\
+				1.0000 \\
+				0.7500 \\
+				\end{array}\right]$
+} 
+\end{homeworkSection}
+
+\begin{homeworkSection}{(b)} % Section within problem
+\problemAnswer{ % Answer
+	The code for this problem can be found in ``q4b.m'' in the included zip file.
+	After deflating the matrix once to get $B$, and by transforming the dominant eigenvector for $B$ to be a suitable eigenvector for $A$, my program calculated:
+		$$
+			\lambda_2 = -3, \vec{v}_2 = \left[\begin{array}{c}
+							-0.0000 \\
+							0.6839 \\
+							-1.0258 \\
+							\end{array}\right]
+		$$
+	
+	My program also gets the third eigenvalue/eigenvector pair, but they will not be included in this analysis.
+}
+\end{homeworkSection}
+
+\begin{homeworkSection}{(c)} % Section within problem
+\problemAnswer{ % Answer
+	My program produced: 
+$$
+\lambda_1 = 11.0000, \vec{v}_1 = \left[\begin{array}{c}
+		0.5000 \\
+		1.0000 \\
+		0.7500 \\
+		\end{array}\right]
+$$
+
+$$
+\lambda_2 = -3.0000, \vec{v}_2 = 
+\left[\begin{array}{c}
+	-0.0000 \\
+	0.6839 \\
+	-1.0258 \\
+\end{array}\right]
+$$
+
+MATLAB's eig function produced (it was originally in a different order):
+$$
+\lambda_1 = 11.0000, \vec{v}_1 = \left[\begin{array}{c}
+		0.3714 \\
+		0.7428 \\
+		0.5571 \\
+		\end{array}\right]
+$$
+
+$$
+\lambda_2 = -3.0000, \vec{v}_2 = 
+\left[\begin{array}{c}
+	-0.0000 \\
+	-0.5547 \\
+	0.8321 \\
+\end{array}\right]
+$$
+
+The eigenvalues are obviously equivalent, so that checks out. The eigenvectors are not the same, but that's ok as long as they span the same space. A quick point-wise division of each pair reveals them to be ok, since the division reveals a multiple of $\vec{1}$.
+}
+\end{homeworkSection}
+
+\end{homeworkProblem}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 5
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}[Problem 5] % Roman numerals
+
+\begin{homeworkSection}{(a)} % Section within problem
+\problemAnswer{ % Answer
+	The code for this part of the assignment can be found in ``q5.m".
+	I used an $\epsilon$ cut-off value on the value of $\|A^{(k)} - A^{(k - 1)}\|_F$ to determine convergence.
+	The code works well. For example, for $A = \left[\begin{array}{ccc}
+			 				2 & 3 & 2\\
+			 				10 & 3 & 4\\
+			 				3 & 6 & 1  \\
+			 				\end{array}\right]\\$, the code produces:
+	$$
+	A^{(\infty)} = \left[\begin{array}{ccc}
+				 				11.0000 & 0.7220 & -6.1864\\
+				 				0 & -3.0000 & -3.8996\\
+				 				0 & 0 & -2.0000  \\
+				 				\end{array}\right]\\
+	$$
+	
+	Which is consistent with the previous question!
+	
+	
+} 
+\end{homeworkSection}
+
+\end{homeworkProblem}
+
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 6
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}[Problem 6] % Roman numerals
+
+\begin{homeworkSection}{(a)} % Section within problem
+\problemAnswer{ % Answer
+	We have shown previously that for a rank-one matrix $A = \vec{u}\vec{v}^T$, $\vec{u}^T\vec{v}$ is an eigenvalue of $A$. We can also show that $det(A)$ is the product of the eigenvalues since for all eigenvalues $\lambda$ of $A$, $det(A - \lambda I) = 0$. Since  $A = \vec{u}\vec{v}^T$ is a rank-one matrix, it's only eigenvalue is $\vec{u}^T\vec{v}$. So $det(A) = \vec{u}^T\vec{v}$. So, from this, $I + \vec{u}\vec{v}^T$ is like shifting $A$ by negative 1, that is, adding 1 to all of its eigenvalues. And since $A$ has only one eigenvalue, the product of its eigenvalues is also incremented by 1, giving us $det(A) = \vec{u}^T\vec{v} + 1$.
+	
+} 
+\end{homeworkSection}
+
+\end{homeworkProblem}
+\end{document}

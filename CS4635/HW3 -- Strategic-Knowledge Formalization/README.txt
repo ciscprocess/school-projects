@@ -1,0 +1,1 @@
+Building and running this application is simple. At the command line, run "python engine.py", assuming the current directory is correct. Nothing beyond the standard python library is needed, however, do note that I've only tested this in 64-bit python.
